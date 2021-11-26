@@ -34,4 +34,16 @@ public class OrderLine
     OrderLine other = (OrderLine)obj;
     return item.equals(other.item) && amount == other.amount;
   }
+
+  @Override public String toString()
+  {
+    return "OrderLine{" + "item=" + item + ", amount=" + amount + '}';
+  }
+
+  // This copy method is not on the UML, but is needed for the composition
+  public OrderLine copy()
+  {
+    OrderLine other = new OrderLine(item, amount);
+    return other;
+  }
 }
