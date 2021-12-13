@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Date {
     private int day;
     private int month;
@@ -65,7 +67,16 @@ public class Date {
 
     private void nextDay()
     {
-        // todo
+        day++;
+        if (day>daysInMonth()){
+            month++;
+            day=1;
+            if (month==13){
+                year++;
+                month=1;
+            }
+        }
+
     }
 
     public int numberOfDaysUntil(Date date2)
@@ -76,13 +87,16 @@ public class Date {
 
     public static Date today()
     {
-        // todo
-        return new Date(1, 1, 1); // holder
+        LocalDate today = LocalDate.now();
+        return new Date(today.getDayOfMonth(),today.getMonthValue(),
+            today().getYear());
     }
+
+
 
     public Date copy()
     {
-        // todo
-        return new Date(1, 1, 1); // holder
+
+        return new Date(day,month,year);
     }
 }
