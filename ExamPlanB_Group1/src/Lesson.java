@@ -56,6 +56,7 @@ public class Lesson
       resourcesArray[i] = resources.get(i);
     }
     return resourcesArray;
+    //return (Resource[]) resources.toArray();
   }
 
   //creates a new array and loops through all resources
@@ -73,7 +74,7 @@ public class Lesson
   }
 
   //this method converts end and start time of the lesson to seconds
-  //then we store this variable ind "subtraction" and we use it to create a new Time object, which is returned
+  //then we store this variable int "subtraction" and we use it to create a new Time object, which is returned
   public Time getDuration(){
     int subtraction = end.convertToSeconds() - start.convertToSeconds();
     Time time = new Time(subtraction);
