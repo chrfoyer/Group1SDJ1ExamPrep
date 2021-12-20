@@ -10,19 +10,20 @@ public class Time {
     this.second = second;
   }
 
-  public Time(int totalTimeinSeconds)
+  public Time(int totalTimeInSeconds)
   {
 
-    this.hour = totalTimeinSeconds / 3600;
-    this.minute = (totalTimeinSeconds % 3600) / 60;
-    this.second = (totalTimeinSeconds % 3600) % 60;
+    this.hour = totalTimeInSeconds / 3600;
+    this.minute = (totalTimeInSeconds % 3600) / 60;
+    this.second = (totalTimeInSeconds % 3600) % 60;
   }
 
   public int convertToSeconds()
   {
+    // Changed from division to multiplication - CF 20/12
     int result = 0;
-    result += hour / 3600;
-    result += minute / 60;
+    result += hour * 3600;
+    result += minute * 60;
     result += second;
     return result;
   }
@@ -55,6 +56,26 @@ public class Time {
   }
 
   public String toString(){
-    return "Hour: "+hour+" Minute: "+minute+" Second: "+second;
+    // Changed to look like a digital clock readout (hh:mm:ss)
+    String str = "";
+
+    if (hour < 10)
+    {
+      str += 0;
+    }
+    str += hour + ":";
+
+    if (minute < 10)
+    {
+      str += 0;
+    }
+    str += minute + ";";
+
+    if (second < 10)
+    {
+      str += 0;
+    }
+    str += second;
+    return str;
   }
 }
