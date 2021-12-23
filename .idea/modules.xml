@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Exam-1-CarRental/Exam-1-CarRental.iml" filepath="$PROJECT_DIR$/Exam-1-CarRental/Exam-1-CarRental.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam-10-DigitalCamera/Exam-10-DigitalCamera.iml" filepath="$PROJECT_DIR$/Exam-10-DigitalCamera/Exam-10-DigitalCamera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam-2-StudentList/Exam-2-StudentList.iml" filepath="$PROJECT_DIR$/Exam-2-StudentList/Exam-2-StudentList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam-3-Book/Exam-3-Book.iml" filepath="$PROJECT_DIR$/Exam-3-Book/Exam-3-Book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam-4-ApartmentComplex/Exam-4-ApartmentComplex.iml" filepath="$PROJECT_DIR$/Exam-4-ApartmentComplex/Exam-4-ApartmentComplex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam-5-HousePlumbing/Exam-5-HousePlumbing.iml" filepath="$PROJECT_DIR$/Exam-5-HousePlumbing/Exam-5-HousePlumbing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam-6-Pizza/Exam-6-Pizza.iml" filepath="$PROJECT_DIR$/Exam-6-Pizza/Exam-6-Pizza.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam-7-SiteCollection/Exam-7-SiteCollection.iml" filepath="$PROJECT_DIR$/Exam-7-SiteCollection/Exam-7-SiteCollection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam-8-EmployeeList/Exam-8-EmployeeList.iml" filepath="$PROJECT_DIR$/Exam-8-EmployeeList/Exam-8-EmployeeList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exam-9-Order/Exam-9-Order.iml" filepath="$PROJECT_DIR$/Exam-9-Order/Exam-9-Order.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExamPlanB_Group1/ExamPlanB_Group1.iml" filepath="$PROJECT_DIR$/ExamPlanB_Group1/ExamPlanB_Group1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Group1SDJ1ExamPrep.iml" filepath="$PROJECT_DIR$/.idea/Group1SDJ1ExamPrep.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test9_Order_Chris/Test9_Order_Chris.iml" filepath="$PROJECT_DIR$/Test9_Order_Chris/Test9_Order_Chris.iml" />
