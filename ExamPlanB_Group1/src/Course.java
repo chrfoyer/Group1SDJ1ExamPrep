@@ -35,9 +35,9 @@ public class Course
   public boolean hasLessonOnDate(Date date)
   {
     //Looping and comparing
-    for(int i = 0; i<schedule.size(); i++)
+    for (int i = 0; i < schedule.size(); i++)
     {
-      if(schedule.get(i).getDate().equals(date))
+      if (schedule.get(i).getDate().equals(date))
       {
         return true;
       }
@@ -55,7 +55,7 @@ public class Course
     //There might be a checker if a list already contains this topic
     //so we don't have two same topics, just a suggestion
     ArrayList<String> allTopics = new ArrayList<>();
-    for(int i = 0; i<schedule.size(); i++)
+    for (int i = 0; i < schedule.size(); i++)
     {
       allTopics.add(schedule.get(i).getTopic());
     }
@@ -65,13 +65,13 @@ public class Course
   public ArrayList<OnlineLesson> getAllOnlineLessons()
   {
     ArrayList<OnlineLesson> allOnlineLessons = new ArrayList<>();
-    for(int i = 0; i<schedule.size(); i++)
+    for (int i = 0; i < schedule.size(); i++)
     {
-      if(schedule.get(i) instanceof OnlineLesson)
+      if (schedule.get(i) instanceof OnlineLesson)
       {
         //We need to cast the lesson to the Online Lesson object
         //In order to add it to ArrayList of Online Lesson.
-        allOnlineLessons.add((OnlineLesson)schedule.get(i));
+        allOnlineLessons.add((OnlineLesson) schedule.get(i));
       }
     }
     return allOnlineLessons;
@@ -84,9 +84,10 @@ public class Course
     {
       if (schedule.get(i) instanceof OnlineLesson)
       {
-        if(((OnlineLesson) schedule.get(i)).isCameraRequired())
+        if (((OnlineLesson) schedule.get(i)).isCameraRequired())
         {
-          allOnlineLessonsWithCameraRequired.add((OnlineLesson)schedule.get(i));
+          allOnlineLessonsWithCameraRequired.add(
+              (OnlineLesson) schedule.get(i));
         }
       }
     }
@@ -98,9 +99,9 @@ public class Course
     ArrayList<DiscordLesson> discordLessons = new ArrayList<>();
     for (int i = 0; i < schedule.size(); i++)
     {
-      if(schedule.get(i) instanceof DiscordLesson)
+      if (schedule.get(i) instanceof DiscordLesson)
       {
-        discordLessons.add((DiscordLesson)schedule.get(i));
+        discordLessons.add((DiscordLesson) schedule.get(i));
       }
     }
     return discordLessons;
@@ -113,9 +114,9 @@ public class Course
     {
       if (schedule.get(i) instanceof ZoomLesson)
       {
-        if(((ZoomLesson) schedule.get(i)).usesBreakoutRooms())
+        if (((ZoomLesson) schedule.get(i)).usesBreakoutRooms())
         {
-          zoomLessonWithBreakoutRooms.add((ZoomLesson)schedule.get(i));
+          zoomLessonWithBreakoutRooms.add((ZoomLesson) schedule.get(i));
         }
       }
     }
@@ -130,7 +131,7 @@ public class Course
     {
       //Some faster way
       //allResources.addAll(Arrays.asList(schedule.get(i).getResources()));
-      for(int j = 0; j< schedule.get(i).getResources().length; j++)
+      for (int j = 0; j < schedule.get(i).getResources().length; j++)
       {
         allResources.add(schedule.get(i).getResources()[j]);
       }
@@ -140,10 +141,10 @@ public class Course
 
   public String toString()
   {
-    String s= name + "\nLessons:\n";
+    String s = name + "\nLessons:\n";
     for (int i = 0; i < schedule.size(); i++)
     {
-      s+= (i+1) +". " + schedule.get(i) + "\n";
+      s += (i + 1) + ". " + schedule.get(i) + "\n";
     }
     return s;
   }

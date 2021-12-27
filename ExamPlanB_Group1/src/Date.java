@@ -230,7 +230,7 @@ public class Date
     System.out.println("Age of the Beast From the East in days");
     System.out.println(beastSpawn.numberOfDaysUntil(Date.today()));
     // This will only return true on the day of writing
-    Date nowish = new Date (20, 12, 2021);
+    Date nowish = new Date(20, 12, 2021);
     System.out.println("Are " + nowish + " and today the same?");
     System.out.println(nowish.equals(Date.today()));
   }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 // todo check all classes to see all methods are present from diagram
 public class Student
 {
@@ -131,7 +132,7 @@ public class Student
 
     for (int i = 0; i < grades.size(); i++)
     {
-      allGrades[i]=grades.get(i);
+      allGrades[i] = grades.get(i);
     }
     return allGrades;
   }
@@ -142,11 +143,10 @@ public class Student
 
     for (int i = 0; i < courses.size(); i++)
     {
-      allCourses[i]=courses.get(i);
+      allCourses[i] = courses.get(i);
     }
     return allCourses;
   }
-
 
 }
 
