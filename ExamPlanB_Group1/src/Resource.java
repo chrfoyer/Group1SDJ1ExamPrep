@@ -11,7 +11,7 @@ public class Resource
 
   public boolean isPDF()
   {
-    return extension.equals("pdf");
+    return extension.equals("pdf") || extension.equals("PDF");
   }
 
   public boolean equals(Object obj)
@@ -26,7 +26,6 @@ public class Resource
 
   public String toString()
   {
-    return "The file name is " + fileName + ", and the extension is "
-        + extension;
+    return fileName + "." + extension;
   }
 }

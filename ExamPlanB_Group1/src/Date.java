@@ -190,7 +190,33 @@ public class Date
 
   public String toString()
   {
-    return day + "/" + month + "/" + year;
+    // Conform to dd/MM/yyyy format
+    String str = "";
+    if (day < 10)
+    {
+      str += 0;
+    }
+    str += day + "/";
+    if (month < 10)
+    {
+      str += 0;
+    }
+    str += month + "/";
+    if (year < 10)
+    {
+      str += 0;
+    }
+    if (year < 100)
+    {
+      str += 0;
+    }
+    if (year < 1000)
+    {
+      str += 0;
+    }
+    str += year;
+
+    return str;
   }
 
   // Short test of methods

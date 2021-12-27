@@ -6,6 +6,7 @@ public class Grade
   public Grade(int grade, Course course)
   {
     this.grade = grade;
+    this.course = course;
   }
 
   public int getGrade()
@@ -25,6 +26,6 @@ public class Grade
 
   public String toString()
   {
-    return grade + " " + course;
+    return course.getName() + ": " + grade;
   }
 }

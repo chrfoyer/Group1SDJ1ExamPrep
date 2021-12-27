@@ -8,6 +8,7 @@ public class Course
 
   public Course(String name)
   {
+    schedule = new ArrayList<>();
     this.name = name;
   }
 
@@ -139,7 +140,7 @@ public class Course
 
   public String toString()
   {
-    String s="";
+    String s= name + "\nLessons:\n";
     for (int i = 0; i < schedule.size(); i++)
     {
       s+= (i+1) +". " + schedule.get(i) + "\n";

@@ -5,19 +5,17 @@ public class CoronaPassport
 
   public CoronaPassport(String reason, Date date)
   {
-    if (!(reason.equals("Vaccinated")))
+    if (reason.equals("Vaccinated") || reason.equals("Tested") || reason.equals(
+        "Infected"))
     {
-      if (!(reason.equals("Tested")))
-      {
-        if (!(reason.equals("Infected")))
-        {
-          throw new IllegalArgumentException(
-              "Reason must be one of the following: Vaccinated, Tested or Infected.");
-        }
-      }
+      this.reason = reason;
+      this.date = date.copy();
     }
-    this.reason = reason;
-    this.date = date.copy();
+    else
+    {
+      throw new IllegalArgumentException(
+          "Reason must be one of the following: Vaccinated, Tested or Infected.");
+    }
   }
 
   public String getReason()

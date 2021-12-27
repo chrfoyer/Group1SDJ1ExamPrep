@@ -26,7 +26,7 @@ public abstract class  OnlineLesson extends Lesson{
     }
 
     public String toString(){
-        return super.toString() + "\n" + isCameraRequired();
+        return super.toString() + "\nCamera required: " + isCameraRequired();
     }
 
 }

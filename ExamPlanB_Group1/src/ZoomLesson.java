@@ -30,6 +30,6 @@ public class ZoomLesson extends OnlineLesson{
     }
 
     public String toString(){
-        return super.toString() + "\n" + nameOfSoftware() + ", " + link + "\nUses breakout rooms" + breakoutRooms;
+        return super.toString() + "\n" + nameOfSoftware() + ", " + link + "\nUses breakout rooms: " + breakoutRooms;
     }
 }

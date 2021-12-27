@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+// todo check all classes to see all methods are present from diagram
 public class Student
 {
   private int studentNumber;
@@ -46,6 +46,7 @@ public class Student
     courses.add(course);
   }
 
+  // todo: exception for course not matching
   public void addGrade(Grade grade)
   {
     for (int i = 0; i < courses.size(); i++)
@@ -85,6 +86,11 @@ public class Student
     }
   }
 
+  public CoronaPassport getCoronaPassport()
+  {
+    return coronaPassport;
+  }
+
   public boolean hasValidCoronaPassport()
   {
     if (!(Date.today().isBefore(coronaPassport.getDate())))
@@ -100,7 +106,7 @@ public class Student
       }
       else if (coronaPassport.getReason().equals("Infected")
           && coronaPassport.getDate().numberOfDaysUntil(Date.today()) > 14
-          && coronaPassport.getDate().numberOfDaysUntil(Date.today()) < 180)
+          && coronaPassport.getDate().numberOfDaysUntil(Date.today()) <= 180)
       {
         return true;
       }

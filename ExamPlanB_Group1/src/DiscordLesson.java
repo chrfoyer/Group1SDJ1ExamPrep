@@ -24,7 +24,7 @@ public class DiscordLesson extends OnlineLesson {
     }
 
     public String toString(){
-        return super.toString() + "\n" + nameOfSoftware() + ", " + getChannelName();
+        return super.toString() + "\n" + nameOfSoftware() + ", Channel: " + getChannelName();
     }
 
 }

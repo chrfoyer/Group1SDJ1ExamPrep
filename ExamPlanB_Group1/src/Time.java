@@ -1,13 +1,22 @@
-public class Time {
+public class Time
+{
   private int hour;
   private int minute;
   private int second;
 
   public Time(int hour, int minute, int second)
   {
-    this.hour = hour;
-    this.minute = minute;
-    this.second = second;
+    if (hour >= 0 && hour < 24 && minute >= 0 && minute < 60 && second >= 0
+        && second < 60)
+    {
+      this.hour = hour;
+      this.minute = minute;
+      this.second = second;
+    }
+    else
+    {
+      throw new IllegalArgumentException("Time is not valid");
+    }
   }
 
   public Time(int totalTimeInSeconds)
@@ -20,7 +29,6 @@ public class Time {
 
   public int convertToSeconds()
   {
-    // Changed from division to multiplication - CF 20/12
     int result = 0;
     result += hour * 3600;
     result += minute * 60;
@@ -43,19 +51,24 @@ public class Time {
       return new Time(this.convertToSeconds() - time2.convertToSeconds());
   }
 
-  public Time copy(){
+  public Time copy()
+  {
     return new Time(hour, minute, second);
   }
 
-  public boolean equals(Object obj){
-    if (!(obj instanceof Time)){
+  public boolean equals(Object obj)
+  {
+    if (!(obj instanceof Time))
+    {
       return false;
     }
-    Time other=(Time)obj;
-    return hour==other.hour&&minute==other.minute&&other.second==second;
+    Time other = (Time) obj;
+    return hour == other.hour && minute == other.minute
+        && other.second == second;
   }
 
-  public String toString(){
+  public String toString()
+  {
     // Changed to look like a digital clock readout (hh:mm:ss)
     String str = "";
 
