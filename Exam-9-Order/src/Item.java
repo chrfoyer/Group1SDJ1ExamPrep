@@ -19,6 +19,7 @@ public abstract class Item
     return price;
   }
 
+  // todo make this method work for the subclasses of item
   public boolean equals(Object obj)
   {
     if (!(obj instanceof Item))

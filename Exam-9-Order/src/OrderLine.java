@@ -37,7 +37,7 @@ public class OrderLine
 
   @Override public String toString()
   {
-    return "OrderLine{" + "item=" + item + ", amount=" + amount + '}';
+    return item.getInfo() + "Quantity: " + amount;
   }
 
   // This copy method is not on the UML, but is needed for the composition

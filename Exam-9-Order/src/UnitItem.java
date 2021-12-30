@@ -18,6 +18,6 @@ public class UnitItem extends Item
 
   public String getInfo()
   {
-    return "Unit Item:\n" + super.toString();
+    return "Unit Item:\n" + super.getName() + ", Price: " + super.getPrice() ;
   }
 }

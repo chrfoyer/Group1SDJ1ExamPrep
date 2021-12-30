@@ -26,6 +26,6 @@ public class WeighedItem extends Item
 
   public String getInfo()
   {
-    return "Weighed Item:\n" + super.toString() + "\nWeight: " + weight;
+    return "Weighed Item:\n" + super.getName() + ", Price: " + super.getPrice() + "\nWeight: " + weight;
   }
 }
