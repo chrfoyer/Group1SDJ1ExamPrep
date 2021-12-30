@@ -28,12 +28,12 @@ public class Date
       return this.day < date2.day;
   }
 
-  private boolean isLeapYear()
+  public boolean isLeapYear()
   {
     return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
   }
 
-  private int daysInMonth()
+  public int daysInMonth()
   {
     if ((month == 1) || (month == 3) || (month == 5) || (month == 7) || (month
         == 8) || (month == 10) || (month == 12))
@@ -55,7 +55,7 @@ public class Date
 
   }
 
-  private void nextDay()
+  public void nextDay()
   {
     day++;
     if (day > daysInMonth())
