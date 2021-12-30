@@ -47,16 +47,22 @@ public class Student
     courses.add(course);
   }
 
-  // todo: exception for course not matching
   public void addGrade(Grade grade)
   {
-    for (int i = 0; i < courses.size(); i++)
-    {
-      if (courses.get(i).equals(grade.getCourse()))
+    boolean missing = true;
+
+      for (int i = 0; i < courses.size(); i++)
       {
-        grades.add(grade);
+        if (courses.get(i).equals(grade.getCourse()))
+        {
+          grades.add(grade);
+          missing = false;
+        }
       }
-    }
+      if (missing){
+        System.out.println("There is no course for that grade");
+      }
+
   }
 
   public void addCoronaPassport(CoronaPassport passport)
