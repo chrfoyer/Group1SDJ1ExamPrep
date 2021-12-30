@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-// TODO: 19/12/2021 FINISH 
 public class Course
 {
   private ArrayList<Lesson> schedule;

@@ -14,21 +14,6 @@ public class Date
     this.year = year;
   }
 
-  public int getDay()
-  {
-    return day;
-  }
-
-  public int getMonth()
-  {
-    return month;
-  }
-
-  public int getYear()
-  {
-    return year;
-  }
-
   public boolean isBefore(Date date2)
   {
     if (this.year < date2.year)
