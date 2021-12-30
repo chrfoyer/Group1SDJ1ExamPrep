@@ -13,7 +13,7 @@ public class Date
     this.month = month;
     this.year = year;
   }
-
+/*
   public boolean isBefore(Date date2)
   {
     if (this.year < date2.year)
@@ -27,7 +27,50 @@ public class Date
     else
       return this.day < date2.day;
   }
+*/
+public boolean isBefore(Date date)
+{
+  int years = this.year - date.year;
+  int months = this.month - date.month;
+  int days = this.day - date.day;
 
+  if (years < 0)
+  {
+    return true;
+  }
+  else if (years > 0)
+  {
+    return false;
+  }
+  else
+  {
+    if (months < 0)
+    {
+      return true;
+    }
+    else if (months > 0)
+    {
+      return false;
+    }
+    else
+    {
+      if (days < 0)
+      {
+        return true;
+      }
+      else if (days > 0)
+      {
+        return false;
+      }
+      else
+      {
+        return false;
+      }
+    }
+  }
+
+
+}
   public boolean isLeapYear()
   {
     return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);

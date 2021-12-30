@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.util.Arrays;
 
 public class ExamTest
 {
@@ -18,13 +19,16 @@ public class ExamTest
 
       System.out.println("Time1 is before time2: " + time1.isBefore(time2));
       System.out.println("Time2 is before time1: " + time2.isBefore(time1));
-      System.out.println("This is time from time1 until time2: " + time1.timeUntil(time2));
+      System.out.println(
+          "This is time from time1 until time2: " + time1.timeUntil(time2));
 
       Time timeCopy = time1.copy();
       System.out.println("This is the copy of time1: " + timeCopy);
 
-      System.out.println("Time1 and timeCopy are equal: " + time1.equals(timeCopy));
-      System.out.println("Time2 and timeCopy are equal: " + time2.equals(timeCopy));
+      System.out
+          .println("Time1 and timeCopy are equal: " + time1.equals(timeCopy));
+      System.out
+          .println("Time2 and timeCopy are equal: " + time2.equals(timeCopy));
     }
     //Time class - Test
 
@@ -41,8 +45,10 @@ public class ExamTest
       System.out.println("Resource1 is PDF: " + resource1.isPDF());
       System.out.println("Resource2 is PDF: " + resource2.isPDF());
 
-      System.out.println("Resource1 is equal to resource2: " + resource1.equals(resource2));
-      System.out.println("Resource1 is equal to resource3: " + resource1.equals(resource3));
+      System.out.println(
+          "Resource1 is equal to resource2: " + resource1.equals(resource2));
+      System.out.println(
+          "Resource1 is equal to resource3: " + resource1.equals(resource3));
     }
     //Resource class - Test
 
@@ -61,13 +67,16 @@ public class ExamTest
       System.out.println("Date1 is leap year: " + date1.isLeapYear());
       System.out.println("Date2 is leap year: " + date2.isLeapYear());
 
-      System.out.println("Number of day in month of date1: " + date1.daysInMonth());
-      System.out.println("Number of day in month of date2: " + date2.daysInMonth());
+      System.out
+          .println("Number of day in month of date1: " + date1.daysInMonth());
+      System.out
+          .println("Number of day in month of date2: " + date2.daysInMonth());
 
       date1.nextDay();
       System.out.println("Date1 moved to next day: " + date1);
 
-      System.out.println("Number of days from date1 until date2: " + date1.numberOfDaysUntil(date2));
+      System.out.println("Number of days from date1 until date2: " + date1
+          .numberOfDaysUntil(date2));
 
       System.out.println("This the today's date: " + Date.today());
 
@@ -75,10 +84,62 @@ public class ExamTest
       System.out.println("This is the copy of date1: " + dateCopy);
 
       System.out.println("Date1 is equals to date2: " + date1.equals(date2));
-      System.out.println("Date1 is equals to dateCopy: " + date1.equals(dateCopy));
+      System.out
+          .println("Date1 is equals to dateCopy: " + date1.equals(dateCopy));
     }
     //Date class - Test
 
+    //Lesson class - Test
+    {
+      Resource[] res = new Resource[] {new Resource("presentation", "pdf"),
+          new Resource("exercise", "pdf")};
 
+      Lesson lesson0 = new Lesson("Modular Arithmetic", new Date(15, 1, 2022),
+          new Time(8, 20, 0), new Time(11, 50, 0), res);
+
+      Lesson lesson1 = new Lesson("Modular Arithmetic", new Date(15, 1, 2022),
+          new Time(8, 20, 0), new Time(11, 50, 0), res);
+
+      Lesson lesson1_1 = new Lesson("Logarithms", new Date(15, 1, 2022),
+          new Time(8, 20, 0), new Time(11, 50, 0), res);
+
+      System.out.println("\nLESSON CLASS\nThis is the lesson1: " + lesson1 + "\n");
+      System.out.println(
+          "This is the topic of lesson1: " + lesson1
+              .getTopic());
+      System.out.println("This is the date of lesson1: " + lesson1.getDate());
+      System.out.println("Those are resources of lesson1: " + Arrays
+          .toString(lesson1.getResources()));
+      System.out.println(
+          "Those are the PDF resources of lesson1: " + lesson1.getAllPDFs());
+      System.out
+          .println("This is the duration of lesson1: " + lesson1.getDuration());
+      System.out.println("This is the time and date of lesson1: " + lesson1
+          .getDateTimeString());
+
+      System.out.println("This time(8:20-11:50) is valid: " + Lesson
+          .hasValidTime(new Time(8, 20, 0), new Time(11, 50, 0)));
+      System.out.println("This time(11:50-8:20) is valid: " + Lesson
+          .hasValidTime(new Time(11, 50, 0), new Time(8, 20, 0)));
+      System.out.println("\nThis is lesson0: " + lesson0 + "\n");
+      System.out.println("Lesson1 is equal to lesson0: "+ lesson1.equals(lesson0));
+      System.out.println("Lesson1 is equal to lesson2: "+ lesson1.equals(lesson1_1));
+    }
+    //Lesson class - Test
+
+    //OnlineLesson class, DiscordLesson class, ZoomLesson class - Test
+    {
+      Resource[] res = new Resource[] {new Resource("presentation", "pdf"),
+          new Resource("exercise", "pdf")};
+
+      Lesson lesson2 = new ZoomLesson("Modular Arithmetic",
+          new Date(15, 1, 2022), new Time(8, 20, 0), new Time(11, 50, 0), res,
+          false, "facebook.com", true);
+
+      Lesson lesson3 = new DiscordLesson("Modular Arithmetic",
+          new Date(15, 1, 2022), new Time(8, 20, 0), new Time(11, 50, 0), res,
+          false, "1X-DMA");
+    }
+    //OnlineLesson class, DiscordLesson class, ZoomLesson class - Test
   }
 }

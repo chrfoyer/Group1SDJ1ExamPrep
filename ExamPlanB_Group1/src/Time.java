@@ -82,7 +82,7 @@ public class Time
     {
       str += 0;
     }
-    str += minute + ";";
+    str += minute + ":";
 
     if (second < 10)
     {
