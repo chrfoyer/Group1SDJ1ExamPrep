@@ -55,7 +55,7 @@ public class Student
       {
         if (courses.get(i).equals(grade.getCourse()))
         {
-          grades.add(grade);
+          grades.add(grade.copy());
           missing = false;
         }
       }
@@ -152,6 +152,11 @@ public class Student
       allCourses[i] = courses.get(i);
     }
     return allCourses;
+  }
+
+  public String toString()
+  {
+    return "Name: " + getName() + ", Student number: " + getStudentNumber();
   }
 
 }

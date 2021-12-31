@@ -61,7 +61,7 @@ public class Course
     return allTopics;
   }
 
-  public ArrayList<OnlineLesson> getAllOnlineLessons()
+  public ArrayList<OnlineLesson> getOnlineLessons()
   {
     ArrayList<OnlineLesson> allOnlineLessons = new ArrayList<>();
     for (int i = 0; i < schedule.size(); i++)
@@ -76,7 +76,7 @@ public class Course
     return allOnlineLessons;
   }
 
-  public ArrayList<OnlineLesson> getAllOnlineLessonsWithCameraRequired()
+  public ArrayList<OnlineLesson> getOnlineLessonsWithCameraRequired()
   {
     ArrayList<OnlineLesson> allOnlineLessonsWithCameraRequired = new ArrayList<>();
     for (int i = 0; i < schedule.size(); i++)
