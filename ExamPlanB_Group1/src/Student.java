@@ -47,15 +47,16 @@ public class Student
     courses.add(course);
   }
 
-  public void addGrade(Grade grade)
+  public void addGrade(int grade, Course course)
   {
+    Grade grade1 = new Grade(grade,course);
     boolean missing = true;
 
       for (int i = 0; i < courses.size(); i++)
       {
-        if (courses.get(i).equals(grade.getCourse()))
+        if (courses.get(i).equals(course))
         {
-          grades.add(grade.copy());
+          grades.add(grade1.copy());
           missing = false;
         }
       }

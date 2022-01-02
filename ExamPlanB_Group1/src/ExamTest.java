@@ -340,8 +340,8 @@ public class ExamTest
       course2.addLesson(lesson2_1);
       course2.addLesson(lesson3);
 
-      Grade grade1 = new Grade(7, course2);
-      Grade grade2 = new Grade(2, course1);
+      //Grade grade1 = new Grade(7, course2);
+     // Grade grade2 = new Grade(2, course1);
 
       CoronaPassport coronaPassport = new CoronaPassport("Vaccinated",
           new Date(11, 9, 2021));
@@ -354,8 +354,8 @@ public class ExamTest
       System.out.println("This is the student's  name: " + student.getName());
       student.addCourse(course1);
       student.addCourse(course2);
-      student.addGrade(grade1);
-      student.addGrade(grade2);
+      student.addGrade(7,course2);
+      student.addGrade(2,course1);
       student.addCoronaPassport(coronaPassport);
 
       System.out.println("This is the student's corona passport: " + student
