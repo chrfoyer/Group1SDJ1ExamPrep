@@ -115,7 +115,7 @@ public boolean isBefore(Date date)
   }
 
   public int numberOfDaysUntil(Date date2)
-  {
+  {/*
     // This will be used to find the days in a month, because the days in a month method
     // Does not have a parameter
     Date dateHolder;
@@ -189,6 +189,18 @@ public boolean isBefore(Date date)
     {
       return date2InDays - date1InDays;
     }
+    */
+    int counter = 0;
+
+    if (isBefore(date2)){
+      while (isBefore(date2)){
+        nextDay();
+        counter++;
+      }
+    } else {
+      throw new InvalidParameterException("The Parameter date is before the date in the object");
+    }
+    return counter;
   }
 
   public static Date today()
