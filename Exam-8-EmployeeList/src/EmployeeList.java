@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-// TODO: 02/01/2022 EQUALS METHOD 
+
 public class EmployeeList
 {
 
