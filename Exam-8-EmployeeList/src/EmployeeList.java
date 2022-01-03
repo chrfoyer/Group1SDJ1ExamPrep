@@ -50,6 +50,8 @@ public class EmployeeList
     return counter;
   }
 
+
+
   public Employee[] getAllEmployees()
   {
     return list;
@@ -83,7 +85,10 @@ public class EmployeeList
     }
     EmployeeList other=(EmployeeList)obj;
 
-    // TODO: 02/01/2022 THIS 
-    return true;
+    if ((getNumberOfEmployees()== other.getNumberOfEmployees())){
+      return getAllEmployees() == other.getAllEmployees();
+      }
+    return false;
+    }
   }
-}
+
