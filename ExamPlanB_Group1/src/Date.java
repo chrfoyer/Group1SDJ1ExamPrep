@@ -189,6 +189,21 @@ public boolean isBefore(Date date)
     {
       return date2InDays - date1InDays;
     }
+
+    //Other Days Until
+    /*
+        int counter = 0;
+
+    if (isBefore(date2)){
+      while (isBefore(date2)){
+        nextDay();
+        counter++;
+      }
+    } else {
+      throw new InvalidParameterException("The Parameter date is before the date in the object");
+    }
+    return counter;
+     */
   }
 
   public static Date today()
