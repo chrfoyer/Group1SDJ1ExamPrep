@@ -18,7 +18,7 @@ public abstract class OnlineLesson extends Lesson
   public abstract String nameOfSoftware();
 
   //comparing object of OnlineLesson using superClass
-  //not sure if it's correct
+
   public boolean equals(Object obj)
   {
     if (!(obj instanceof OnlineLesson))
